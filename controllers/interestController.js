@@ -1,5 +1,5 @@
 import Interest from '../models/Interest.js'
-import Product from '../models/Product.js'
+import Product from '../models/product.js'
 
 // @desc    Register interest in a product
 // @route   POST /api/interests

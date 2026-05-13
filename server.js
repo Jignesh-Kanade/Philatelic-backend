@@ -30,6 +30,14 @@ app.use(cors({
 // Routes
 app.use('/api', routes)
 
+
+app.get('/', (req, res) => {
+    res.json({
+        success: true,
+        message: 'Backend Running Successfully'
+    })
+})
+
 // Health check
 app.get('/health', (req, res) => {
     res.status(200).json({
@@ -42,8 +50,10 @@ app.get('/health', (req, res) => {
 // Error handler (must be last)
 app.use(errorHandler)
 
-const PORT = process.env.PORT || 5000
+// const PORT = process.env.PORT || 5000
 
-app.listen(PORT, () => {
-    console.log(`🚀 Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-})
+// app.listen(PORT, () => {
+//     console.log(`🚀 Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+// })
+
+export default app
