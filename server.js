@@ -46,6 +46,7 @@ app.get('/health', (req, res) => {
         timestamp: new Date().toISOString()
     })
 })
+app.use('/api', routes)
 
 // Error handler (must be last)
 app.use(errorHandler)
